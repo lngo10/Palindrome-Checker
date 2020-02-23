@@ -21,23 +21,27 @@ General algorithm:
 
 int main(){
 string input;
-int oddoreven;
-//bool odd, even;
 char rr = 'y';
 while (rr == 'Y' || rr == 'y') {
 	cout << "enter word" << endl;
 	cin >> input;
-	/*int inputsize = size(input);
+	int inputsize = size(input);
 	vector<char> inputword(input.begin(), input.end());
 	for (int i = 0; i < inputsize; i++) {
-		cout << "test" << endl;
-	}*/
-	oddoreven = size(input);
-	if (oddoreven % 2 == 0) { //even function
-		cout << "test for even" << endl; // remove later
-		//cout << oddoreven % 2 << endl;
+		inputword[i] = input[i];
+		cout << inputword[i] << endl;	//test if inputword vector is equal to input
 	}
-	else if (oddoreven % 2 != 0) { // odd function
+	if (inputsize % 2 == 0) { //even function
+		cout << "test for even" << endl; // remove later
+		if (inputword.front() == inputword.back())
+		{
+			cout << "front and back are equal" << endl;
+			/*if (inputword.front( + 1) == inputword.back( - 1) {
+				cout << "front + 1 and back - 1 are equal" << endl;
+			}*/
+		}
+	}
+	/*else if (inputsize % 2 != 0) { // odd function
 		cout << "test for odd" << endl; // remove later
 
 		// test function for odd
@@ -47,7 +51,8 @@ while (rr == 'Y' || rr == 'y') {
 			//oddword.at(oddi) = input.at(oddi);
 			//oddword.
 		}
-	}
+	}*/
+
 	cout << "rerun program? [Y/N]" << endl; //ask to rerun
 	cin >> rr;
 	cout << endl;}
